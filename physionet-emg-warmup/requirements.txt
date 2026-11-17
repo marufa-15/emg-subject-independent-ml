@@ -1,0 +1,10 @@
+# Installed and used (versions as run on Python 3.15.2, Windows 11)
+numpy==2.5.4          # already present
+matplotlib==3.11.2    # already present
+torch==2.15.0         # already present (CPU build)
+scipy==1.18.1         # installed for this project
+scikit-learn==1.9.1   # installed for this project (joblib 1.6.0 and threadpoolctl 3.8.0 come with it)
+
+# Also installed during setup but NOT used by the scripts:
+#   wfdb==4.3.1, pandas==3.1.1  -> the .hea/.dat files are parsed by hand in emg_common.py.
+#   (On this machine an Application Control policy blocks pandas' compiled files, so wfdb cannot import.)

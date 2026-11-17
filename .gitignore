@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+_cache/
+*.joblib
+*.pt
+*.pth
+.DS_Store
+*.log
+*driver_log*
+run_until_done.ps1
+
+# raw datasets are not checked in - see each project's README for the source
+physionet-emg-warmup/emgdb-1.0.0/
+uci-physical-action-loso/archive/
