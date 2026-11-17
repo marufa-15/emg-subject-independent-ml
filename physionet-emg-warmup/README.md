@@ -15,7 +15,7 @@ Run order: `01_load_inspect.py` -> `02_features_classical.py` -> `03_deep_learni
 - Model/hyper-parameter selection used time-blocked CV (5 blocks, purged) inside train only. For deep models,
   early stopping used the last 15% of the training timeline. The test set was never used to choose anything.
 
-## Data problems found (worth knowing before the next dataset)
+## Data problems found (worth knowing)
 1. **The neuropathy `.dat` is corrupted by int16 overflow**: 410 samples below -3.28 mV wrapped around by exactly
    +6.5536 mV. The true range is -7.30 to +3.26 mV. `wfdb` would read the damaged `.dat`. The `.txt` has the true
    values but 2 garbled rows per file, so `emg_common.load_signal` uses the `.dat` and overwrites it with the clean
